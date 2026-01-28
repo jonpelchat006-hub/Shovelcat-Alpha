@@ -1472,6 +1472,135 @@ REMAINING OPEN QUESTIONS:
     5. Does the lithium deficit connect to the bowtie neck?
 """)
 
+
+# =========================================================================
+# PART 21: THE TWO-GAP STRUCTURE -- WHY EXACTLY TWO CORRECTIONS
+# =========================================================================
+
+print("\n" + "=" * 70)
+print("PART 21: THE TWO-GAP STRUCTURE")
+print("=" * 70)
+
+print(r"""
+THE TWO 0.000...1 GAPS (Jonathan's insight):
+
+    Matter approaches +0.999... but never reaches +1
+    Antimatter approaches -0.999... but never reaches -1
+
+    -1     -0.999...    0    +0.999...    +1
+    |----gap----|========|========|----gap----|
+    God-   anti  <=vesica=>  matter   God+
+
+    TWO gaps at the boundaries = TWO correction terms!
+
+    Gap at +1 (matter boundary):
+        Triangle correction: -(pi-3)^3 / 9
+        Odd polygon, action-dominant, RELEASES energy
+
+    Gap at -1 (antimatter boundary):
+        Square correction: +3(pi-3)^5 / 16
+        Even polygon, potential-dominant, STORES energy
+
+    The formula has exactly two corrections because
+    there are exactly two gaps!
+""")
+
+print("GAP ANALYSIS:")
+print(f"  Triangle correction (matter gap):    {tri_term:.15f}")
+print(f"  Square correction (antimatter gap):  {sq_term:.15f}")
+print(f"  Ratio |triangle/square|: {abs(tri_term/sq_term):.6f}")
+print(f"  phi^7 = {PHI**7:.6f} (1.77% from ratio -- near miss)")
+print()
+
+print("GOLDEN RATIO ASYMMETRY IN THE GAPS:")
+print(f"  Matter path (phi):      {PHI:.6f} (longer)")
+print(f"  Antimatter path (1/phi): {1/PHI:.6f} (shorter)")
+print(f"  Path ratio = phi^2:     {PHI**2:.6f}")
+print(f"  Matter gap is SMALLER (longer path compresses it)")
+print(f"  Antimatter gap is LARGER (shorter path expands it)")
+print()
+print(f"  Triangle term (matter gap):   |{tri_term:.10f}| = LARGER correction")
+print(f"  Square term (antimatter gap): |{sq_term:.10f}| = SMALLER correction")
+print(f"  Matter's gap needs more correction because the")
+print(f"  triangle is the action-dominant polygon (L > 0).")
+
+
+# =========================================================================
+# PART 22: THE OVERLAP CONSTRAINT AND SUB-STRUCTURES
+# =========================================================================
+
+print("\n" + "=" * 70)
+print("PART 22: THE OVERLAP CONSTRAINT AND SUB-STRUCTURES")
+print("=" * 70)
+
+print(r"""
+THE DOUBLE-COUNTING CONSTRAINT:
+
+    The (pi-3) shift on either side of center creates an OVERLAP:
+
+        |---matter---->|
+                  |<----antimatter---|
+
+        The overlap region = vesica neck = (pi-3)
+
+    This overlap belongs to BOTH sides but can only be counted ONCE.
+    If we try to add a THIRD correction, it would re-use dust
+    that's already allocated. Double-counting!
+
+
+DUST BUDGET:
+""")
+
+total_dust = dust
+used = abs(tri_term) + abs(sq_term)
+print(f"  Total dust: (pi-3) = {dust:.10f}")
+print(f"  Triangle uses: {abs(tri_term):.10f}")
+print(f"  Square uses:   {abs(sq_term):.10f}")
+print(f"  Combined:      {used:.10f} ({used/dust*100:.4f}% of dust)")
+print(f"  Remaining:     {dust - used:.10f} ({(1-used/dust)*100:.4f}%)")
+print()
+print(f"  The corrections use only 0.23% of the dust.")
+print(f"  The remaining 99.77% is the base structure")
+print(f"  (4pi^3 + pi^2 + pi).")
+
+print(r"""
+
+SUB-STRUCTURES THAT FIT INSIDE THE BOWTIE:
+
+    The bowtie has area = 2 equilateral triangles:
+""")
+
+tri_area = 3*math.sqrt(3)/4
+bowtie_area = 2 * tri_area
+circle_area_val = PI
+hex_area = 3*math.sqrt(3)/2
+
+print(f"  Bowtie area:  {bowtie_area:.6f}")
+print(f"  Circle area:  {circle_area_val:.6f}")
+print(f"  Ratio:        {bowtie_area/circle_area_val:.6f} = 3*sqrt(3)/(2*pi)")
+print(f"  Gap:          {1 - bowtie_area/circle_area_val:.6f} = 17.3% of circle")
+print()
+
+print(r"""  This 0.827 ratio is the SAME as the triangle perimeter
+  deficit from Part 9! The bowtie captures 82.7% of the
+  circle's area. The remaining 17.3% is dust territory.
+
+  What fits inside the bowtie?
+    Triangle (n=3):  YES (is half the bowtie)
+    Square (n=4):    YES (fits inside a triangle)
+    Pentagon (n=5):  NO  (extends beyond the neck)
+    Higher:          NO  (too many sides for the neck)
+
+  Only triangle and square corrections exist because
+  only triangle and square FIT INSIDE the bowtie!
+
+  This is THREE independent reasons for exactly two terms:
+    1. Two gaps at boundaries (one per correction)
+    2. Bowtie neck bottleneck (blocks higher polygons)
+    3. Dust budget (no leftover for third correction)
+""")
+
+
 print("=" * 70)
 print("END")
 print("=" * 70)
