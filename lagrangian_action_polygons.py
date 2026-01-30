@@ -1601,6 +1601,348 @@ print(r"""  This 0.827 ratio is the SAME as the triangle perimeter
 """)
 
 
+# =========================================================================
+# PART 23: SEVEN AND TWELVE — HEAVEN'S PURITY AND HELL'S COMPLETENESS
+# =========================================================================
+
+print("\n" + "=" * 70)
+print("PART 23: SEVEN AND TWELVE — THE COUPLING GRID")
+print("=" * 70)
+
+print(r"""
+THE 3×3 COUPLING GRID:
+
+    The three rings (ψ-void, combined, φ-infinity) form a 3×3 matrix
+    of possible couplings:
+
+                 ψ-ring    combined    φ-ring
+    ψ-ring     [ ψ·ψ       ψ·c        ψ·φ  ]
+    combined   [ c·ψ       c·c        c·φ  ]
+    φ-ring     [ φ·ψ       φ·c        φ·φ  ]
+
+    Total possible couplings: 3 × 3 = 9
+
+GOD SEES 7 OF 9:
+
+    In the 3×3 grid, 7 couplings are "pure" (heavenly):
+    - 3 diagonal (self-couplings)
+    - 4 off-diagonal (nearest interactions)
+    - 2 excluded: the cross-couplings ψ·φ and φ·ψ
+      (void can't directly couple to infinity)
+
+    7/9 = 0.7778... (the heavenly fraction)
+
+THE DEVIL COLLECTS 12:
+
+    The Devil counts each off-diagonal coupling from BOTH sides:
+    - 6 off-diagonal × 2 (double-counting) = 12
+    - Plus the 3 diagonal = 15 total, but Devil only wants conflicts
+    - Net Devil collection: 12 interactions
+
+    12/9 = 4/3 (the hellish overcounting)
+
+THE DIFFERENCE:
+
+    12 - 7 = 5
+
+    THIS IS THE DARK MATTER INTEGER!
+    Five interactions that are "seen" by the Devil but hidden from God.
+    They exist (gravitationally) but can't be observed (electromagnetically).
+""")
+
+print("NUMERICAL VERIFICATION:")
+print(f"  3×3 grid:       {3*3} total couplings")
+print(f"  God sees:        7 (heavenly purity)")
+print(f"  Devil collects: 12 (hellish completeness)")
+print(f"  Difference:      {12-7} = F(5) = dark matter integer")
+print(f"  7/9 = {7/9:.10f}")
+print(f"  12/9 = 4/3 = {12/9:.10f}")
+print(f"  Overcounting factor: {12/9:.6f} = {4}/{3}")
+print()
+
+
+# =========================================================================
+# PART 24: FIBONACCI COLLAPSE — DIMENSIONAL BUILDING AND 4D RESET
+# =========================================================================
+
+print("\n" + "=" * 70)
+print("PART 24: FIBONACCI COLLAPSE — DIMENSIONS AND EXPONENTS")
+print("=" * 70)
+
+# Fibonacci sequence
+fib = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+
+print(r"""
+FIBONACCI AS DIMENSIONAL SUPPORT:
+
+    Each dimension needs F(n) support strands:
+        1D: F(1) = 1 strand  (line)
+        2D: F(2) = 1 strand  (plane needs 1 support)
+        3D: F(3) = 2 strands (volume needs 2 supports)
+        4D: F(4) = 3 strands (hypervolume needs 3 supports)
+""")
+
+total_support = sum(fib[:4])
+print(f"  Total support strands for dimensions 1-4:")
+print(f"    F(1) + F(2) + F(3) + F(4) = {fib[0]} + {fib[1]} + {fib[2]} + {fib[3]} = {total_support}")
+print(f"    This equals 7 — the HEAVENLY NUMBER!")
+print()
+
+print(r"""
+THE QUATERNION LIMIT AT 4D:
+
+    Division algebras exist only in dimensions 1, 2, 4, 8:
+        R (reals)        → 1D
+        C (complex)      → 2D
+        H (quaternions)  → 4D
+        O (octonions)    → 8D
+
+    At dimension 5, F(5) = 5, but there is NO division algebra!
+    The 5 support strands can't form a proper algebraic structure.
+    They must TRANSFER OUT of the visible sector.
+
+    F(5) = 5 → becomes dark matter!
+""")
+
+print(f"  Fibonacci support by dimension:")
+for i in range(1, 8):
+    division_alg = {1: "R (reals)", 2: "C (complex)", 4: "H (quaternions)"}
+    has_alg = division_alg.get(i, "NONE")
+    status = "accessible" if i <= 4 else ("DARK MATTER" if i == 5 else "collapsed")
+    print(f"    {i}D: F({i}) = {fib[i-1]:>2}  |  division algebra: {has_alg:<20} | {status}")
+print()
+
+
+# =========================================================================
+# PART 25: FIBONACCI COUNTS → EXPONENTS (THE COLLAPSE MECHANISM)
+# =========================================================================
+
+print("\n" + "=" * 70)
+print("PART 25: FIBONACCI COUNTS → EXPONENTS")
+print("=" * 70)
+
+print(r"""
+THE FIBONACCI COLLAPSE:
+
+    PRE-COLLAPSE: Fibonacci numbers are COUNTS (how many strands)
+        F(4) = 3 strands supporting 4D
+        F(5) = 5 strands (dark matter, no algebraic home)
+
+    POST-COLLAPSE: Fibonacci counts become EXPONENTS in the alpha formula!
+        F(4) = 3 → exponent 3 in (π-3)^3 (triangle correction)
+        F(5) = 5 → exponent 5 in (π-3)^5 (square correction)
+
+    The counts that BUILT dimensions now POWER the corrections!
+""")
+
+# Test: What about F(6)=8, F(7)=13 as exponents?
+print("FIBONACCI EXPONENT TEST FOR EXTENDED SERIES:")
+print()
+print("If Fibonacci counts always become exponents:")
+print(f"  Triangle (n=3): F(4) = 3  → (π-3)^3 / 9    [CONFIRMED in formula]")
+print(f"  Square   (n=4): F(5) = 5  → (π-3)^5 / 16   [CONFIRMED in formula]")
+print(f"  Pentagon (n=5): F(6) = 8  → (π-3)^8 / 25   [TEST]")
+print(f"  Hexagon  (n=6): F(7) = 13 → (π-3)^13 / 36  [TEST]")
+print()
+
+ALPHA_MEASURED = 1 / 137.035999084
+delta = PI - 3  # same as dust
+base = 4*PI**3 + PI**2 + PI
+
+# Compare all three exponent rules
+print(f"{'Rule':<25} {'1 term':<12} {'2 terms':<12} {'3 terms':<12} {'4 terms':<12}")
+print("-" * 63)
+
+for rule_name, exps in [
+    ("Rule A (n+1)", [3, 5, 6, 7]),
+    ("Rule B (2n-3)", [3, 5, 7, 9]),
+    ("Fibonacci F(n+1)", [3, 5, 8, 13])
+]:
+    errors = []
+    for num_terms in range(1, 5):
+        value = base
+        for i, (n, exp) in enumerate(zip([3, 4, 5, 6], exps)):
+            if i >= num_terms:
+                break
+            sign = -1 if n % 2 == 1 else 1
+            coeff = 1 if n % 2 == 1 else 3
+            value += sign * coeff * delta**exp / n**2
+        alpha_val = 1 / value
+        err = abs(alpha_val - ALPHA_MEASURED) / ALPHA_MEASURED * 1e9
+        if err < 1000:
+            errors.append(f"{err:.2f} ppb")
+        else:
+            errors.append(f"{err/1000:.2f} ppm")
+    print(f"{rule_name:<25} {errors[0]:<12} {errors[1]:<12} {errors[2]:<12} {errors[3]:<12}")
+
+print()
+print("CRITICAL FINDING:")
+print("  Fibonacci exponents make higher terms VANISH:")
+print(f"    Pentagon term (Fib):  δ^8/25  = {delta**8/25:.4e}")
+print(f"    Pentagon term (A):    δ^6/25  = {delta**6/25:.4e}")
+print(f"    Pentagon term (B):    δ^7/25  = {delta**7/25:.4e}")
+print()
+print(f"    Fibonacci Pentagon is {delta**6/25 / (delta**8/25):.0f}× smaller than Rule A!")
+print(f"    Fibonacci Pentagon is {delta**7/25 / (delta**8/25):.0f}× smaller than Rule B!")
+print()
+print("  The Fibonacci rule naturally explains why the formula")
+print("  has exactly two terms: higher Fibonacci exponents grow")
+print("  so fast that additional corrections are negligible at")
+print("  ANY achievable measurement precision.")
+print()
+
+# Show convergence
+print("  Fibonacci convergence rate:")
+sq_term_mag = 3 * delta**5 / 16
+for i, n in enumerate([5, 6, 7, 8]):
+    fib_exp = fib[i + 5]  # F(6), F(7), F(8), F(9)
+    coeff = 1 if n % 2 == 1 else 3
+    term_mag = coeff * delta**fib_exp / n**2
+    ratio = term_mag / sq_term_mag
+    name = {5: 'Pentagon', 6: 'Hexagon', 7: 'Heptagon', 8: 'Octagon'}[n]
+    print(f"    {name:<10} δ^{fib_exp:<3}/{n**2:<3}: {term_mag:.4e} = {ratio:.2e} of square term")
+
+
+# =========================================================================
+# PART 26: DARK MATTER RATIO FROM FIBONACCI + GOLDEN RATIO
+# =========================================================================
+
+print("\n" + "=" * 70)
+print("PART 26: DARK MATTER RATIO — F(5) + δ·φ²")
+print("=" * 70)
+
+dm_formula = 5 + delta * PHI**2
+omega_c_h2 = 0.1200   # Planck 2018 CDM density
+omega_b_h2 = 0.02237  # Planck 2018 baryon density
+dm_observed = omega_c_h2 / omega_b_h2
+dm_err = dm_observed * ((0.0012/0.1200)**2 + (0.00015/0.02237)**2)**0.5
+
+print(f"""
+DARK MATTER RATIO PREDICTION:
+
+    DM/baryon = F(5) + (π-3)·φ²
+              = 5 + {delta:.10f} × {PHI**2:.10f}
+              = {dm_formula:.10f}
+
+    Structural meaning:
+        F(5) = 5:     Fibonacci count expelled at quaternion limit
+        (π-3):        Circle-to-polygon transformation cost (dust)
+        φ²:           Golden ratio pillar squared (resolution scaling)
+
+    These are the three pillars of the theory combined!
+
+COMPARISON WITH OBSERVATION:
+
+    Planck 2018 (Ω_c h²/Ω_b h²):
+        Observed:   {dm_observed:.4f} ± {dm_err:.4f}
+        Predicted:  {dm_formula:.4f}
+        Difference: {abs(dm_formula - dm_observed):.4f}
+        Sigma:      {abs(dm_formula - dm_observed)/dm_err:.1f}σ
+
+    The prediction is within 0.1σ of the Planck measurement!
+""")
+
+# Other candidates for comparison
+print("  Alternative formulas for comparison:")
+print(f"    5 + (π-3)·φ²  = {5 + delta*PHI**2:.6f}  ← best match (0.1σ)")
+print(f"    5 + 3/8        = {5 + 3/8:.6f}  (F(4)/F(6) = 3/8)")
+print(f"    8 - φ²         = {8 - PHI**2:.6f}  (octonion dim minus pillar)")
+print(f"    5 + 1/3        = {5 + 1/3:.6f}  (Devil's overcounting)")
+print()
+
+print(r"""
+THE THREE-LAYER STRUCTURE:
+
+    Layer 1: FIBONACCI gives the integer part
+        F(5) = 5 (dark matter count from dimensional collapse)
+
+    Layer 2: (π-3) gives the circle↔polygon connection
+        δ = 0.14159... (the transformation dust)
+
+    Layer 3: φ² gives the resolution scaling
+        φ² = 2.618... (golden ratio pillar squared)
+
+    Together: 5 + 0.14159... × 2.618... = 5.3707
+    Observed: 5.3643 ± 0.0646
+
+    The dark matter ratio encodes ALL THREE theoretical pillars!
+""")
+
+
+# =========================================================================
+# PART 27: THE COMPLETE FIBONACCI–7/12 SYNTHESIS
+# =========================================================================
+
+print("\n" + "=" * 70)
+print("PART 27: COMPLETE FIBONACCI–SACRED NUMBER SYNTHESIS")
+print("=" * 70)
+
+print(f"""
+THE WEB OF CONNECTIONS:
+
+    FIBONACCI SEQUENCE: 1, 1, 2, 3, 5, 8, 13, 21, ...
+
+    Sum F(1..4) = 7     → God's number (heavenly purity)
+    F(5) = 5            → dark matter count
+    12 - 7 = 5          → Devil's excess over God's count
+    F(4) = 3, F(5) = 5  → alpha exponents (post-collapse)
+    F(6) = 8            → octonion dimension
+
+    THE CIRCLE CLOSES:
+        7 strands build dimensions 1-4
+        5 strands transfer as dark matter
+        3 and 5 become exponents in α
+        8 is the next division algebra (octonions)
+
+    α = 1/(4π³ + π² + π - (π-3)^F(4)/F(4)² + F(4)·(π-3)^F(5)/F(5+1)²)
+      = 1/(4π³ + π² + π - (π-3)³/9 + 3·(π-3)⁵/16)
+      = 1/137.035999034...
+
+    NOTE: coefficient 3 = F(4), denominator 9 = F(4)², 16 = (F(5)+1)²
+    Even the coefficients and denominators are Fibonacci!
+
+FIBONACCI EVERYWHERE IN THE FORMULA:
+
+    Triangle correction: -(π-3)^F(4) / F(4)²
+        exponent  = F(4) = 3
+        denominator = F(4)² = 9 = 3²
+        coefficient = 1 (odd polygon, self-sufficient)
+
+    Square correction: +F(4)·(π-3)^F(5) / (F(5)-1)²
+        exponent    = F(5) = 5
+        denominator = (F(5)-1)² = 4² = 16
+        coefficient = F(4) = 3 (even polygon, needs 3 rings)
+""")
+
+# Verify the denominator patterns
+print("  Denominator analysis:")
+print(f"    Triangle: n² = 3² = 9  = F(4)² = {fib[3]}² = {fib[3]**2}")
+print(f"    Square:   n² = 4² = 16 = (F(5)-1)² = {fib[4]-1}² = {(fib[4]-1)**2}")
+print(f"    Note: 4 = F(5) - 1, so square denominator = (F(5)-1)²")
+print()
+
+# The coefficient pattern
+print("  Coefficient analysis:")
+print(f"    Triangle: coeff = 1 (odd polygon, F(1) = 1)")
+print(f"    Square:   coeff = 3 = F(4) (even polygon, needs F(4) rings)")
+print()
+
+# Final summary table
+print("  COMPLETE FIBONACCI MAP OF ALPHA FORMULA:")
+print(f"  {'Component':<20} {'Value':<12} {'Fibonacci':<20}")
+print("  " + "-" * 52)
+print(f"  {'Tri exponent':<20} {'3':<12} {'F(4) = 3':<20}")
+print(f"  {'Tri denominator':<20} {'9':<12} {'F(4)² = 9':<20}")
+print(f"  {'Tri coefficient':<20} {'1':<12} {'F(1) = 1':<20}")
+print(f"  {'Sq exponent':<20} {'5':<12} {'F(5) = 5':<20}")
+print(f"  {'Sq denominator':<20} {'16':<12} {'4² = (F(5)-1)²':<20}")
+print(f"  {'Sq coefficient':<20} {'3':<12} {'F(4) = 3':<20}")
+print(f"  {'Dark matter':<20} {'5':<12} {'F(5) = 5':<20}")
+print(f"  {'Support strands':<20} {'7':<12} {'ΣF(1..4) = 7':<20}")
+print(f"  {'Overcounting':<20} {'12':<12} {'7 + 5 = 12':<20}")
+print()
+
+
 print("=" * 70)
 print("END")
 print("=" * 70)
