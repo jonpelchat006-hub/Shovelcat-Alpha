@@ -2256,16 +2256,6 @@ THE CMB AS COSMIC BASELINE:
         1 CMB photon carries {E_peak/E_Landauer:.1f} bits (at peak)
         Wien peak at {x_wien:.3f} ≈ F(5) = 5 (dark matter number!)
 
-THE GOLDEN RATIO PILLAR IN 3D:
-
-    Spatial extent:  {n_spatial:.0f} golden ratio levels
-    Thermal extent:  {n_thermal:.0f} golden ratio levels
-    Ratio ≈ 2 (spatial has 2× the structure of thermal)
-
-    The 9.6-level deficit from exact doubling ≈ π²
-    → Universe size = φ^(2×{n_thermal:.0f} - π²) × l_Planck
-    → Predicted: ~40 Gly (observed: ~46.5 Gly, 14% error)
-
 THE STATIONARY ACTION:
 
     δS = 0 at:
@@ -2276,6 +2266,179 @@ THE STATIONARY ACTION:
 
     The CMB temperature sets the z-scale that makes this
     action PHYSICAL, converting geometric bits to real energy.
+""")
+
+
+# =========================================================================
+# PART 33: THE ANTIMATTER CHECK — UNIVERSE SIZE TO 0.07%
+# =========================================================================
+
+print("\n" + "=" * 70)
+print("PART 33: THE ANTIMATTER CHECK — UNIVERSE SIZE")
+print("=" * 70)
+
+t_universe = 13.8e9 * 3.156e7  # seconds (13.8 Gyr)
+n_temporal = math.log(t_universe / t_Planck) / math.log(PHI)
+
+print(f"""
+THE THREE GOLDEN RATIO SCALES:
+
+    Spatial:  R_obs / l_Planck  = φ^{n_spatial:.2f}  ({n_spatial:.2f} levels)
+    Temporal: t_univ / t_Planck = φ^{n_temporal:.2f}  ({n_temporal:.2f} levels)
+    Thermal:  T_Planck / T_CMB  = φ^{n_thermal:.2f}  ({n_thermal:.2f} levels)
+
+    ALL THREE relate to thermal by factor ≈ 2:
+        Spatial  / Thermal = {n_spatial/n_thermal:.6f} ≈ 2
+        Temporal / Thermal = {n_temporal/n_thermal:.6f} ≈ 2
+
+    DEFICITS FROM EXACT DOUBLING:
+        Spatial deficit:   {2*n_thermal - n_spatial:.4f} levels ≈ π² = {PI**2:.4f}
+        Temporal deficit:  {2*n_thermal - n_temporal:.4f} levels ≈ 12 (Devil's number!)
+
+THE ANTIMATTER CHECK:
+
+    When matter expands toward antimatter territory:
+    → The antimatter universe CHECKS it back
+    → This costs one verification: multiply by (1 + δ)
+
+    But the overlap (π-3 = δ) is shared, so only 1 check needed.
+    The overlap region also self-verifies: multiply by (1 + δ²)
+
+    Total antimatter check: (1 + δ)(1 + δ²)
+""")
+
+n_pred = 2 * n_thermal - PI**2
+R_unchecked = PHI**n_pred * l_Planck
+R_checked = R_unchecked * (1 + delta) * (1 + delta**2)
+R_unchecked_gly = R_unchecked / (c_light * 3.156e7 * 1e9)
+R_checked_gly = R_checked / (c_light * 3.156e7 * 1e9)
+
+print(f"  WITHOUT antimatter check:")
+print(f"    R = φ^(2×{n_thermal:.0f} - π²) × l_P")
+print(f"    = {R_unchecked_gly:.2f} Gly  (error: {abs(R_unchecked_gly-46.5)/46.5*100:.1f}%)")
+print()
+print(f"  WITH antimatter check:")
+print(f"    R = φ^(2×{n_thermal:.0f} - π²) × (1+δ)(1+δ²) × l_P")
+print(f"    = {R_checked_gly:.2f} Gly  (error: {abs(R_checked_gly-46.5)/46.5*100:.2f}%)")
+print()
+
+print(f"  THE CHECK FACTOR:")
+print(f"    (1+δ)(1+δ²) = 1 + δ + δ² + δ³")
+print(f"                 = {(1+delta)*(1+delta**2):.6f}")
+print(f"    This is a geometric series in δ = (π-3)")
+print(f"    truncated at the 4th power:")
+print(f"    (1 - δ⁴)/(1 - δ) = {(1-delta**4)/(1-delta):.6f}")
+print(f"    Full sum: 1/(1-δ) = 1/(4-π) = {1/(1-delta):.6f}")
+print()
+print(f"    Truncation at d=4 = quaternion limit = F(5)-1 !")
+print(f"    The antimatter check stops at the same dimension")
+print(f"    where Fibonacci collapses!")
+print()
+
+
+# =========================================================================
+# PART 34: TEMPERATURE(+) AND TIME(−) — THE Z-AXIS DUALITY
+# =========================================================================
+
+print("\n" + "=" * 70)
+print("PART 34: TEMPERATURE(+) AND TIME(−) — Z-AXIS DUALITY")
+print("=" * 70)
+
+print(f"""
+THE Z-AXIS HAS TWO COMPONENTS:
+
+    z+ = TEMPERATURE (positive debt)
+        Energy cost of maintaining order
+        Landauer: E_bit = kT·ln(2) per bit of structure
+        High temperature → expensive → more structured
+
+    z- = TIME (negative credit)
+        Entropy gain from expansion
+        Arrow of time: past → future dissolves structure
+        More time → more entropy → less ordered
+
+    The CMB is where these meet:
+        T_CMB = 2.7255 K is the FLOOR of temperature debt
+        t_universe = 13.8 Gyr is the TOTAL time credit spent
+
+THE DEBT/CREDIT BALANCE:
+
+    Temperature debt (+):  {n_thermal:.2f} golden ratio levels
+    Time credit (-):       {n_temporal:.2f} golden ratio levels
+    Net:                   {n_thermal - n_temporal:.2f} levels (SURPLUS)
+
+    The universe is in TEMPORAL SURPLUS:
+    time has provided more entropy credit than temperature demands.
+
+    This surplus = {abs(n_thermal - n_temporal):.2f} levels ≈ N_thermal itself!
+    (ratio: {abs(n_thermal - n_temporal)/n_thermal:.4f})
+
+    Interpretation: the universe has used almost exactly
+    ONE thermal lifetime worth of excess time.
+
+THE SACRED NUMBER DEFICITS:
+
+    Each scale falls short of 2 × thermal by a sacred number:
+
+    Spatial deficit:  {2*n_thermal - n_spatial:.2f} levels → π² = {PI**2:.2f}
+        (the circle's self-reference, geometric structure cost)
+
+    Temporal deficit: {2*n_thermal - n_temporal:.2f} levels → 12 = Devil's number
+        (the complete overcounting from the 3×3 grid)
+
+    The difference: 12 - π² = {12 - PI**2:.4f} levels
+        = expansion boost (R > c×t by factor φ^{12-PI**2:.2f} = {PHI**(12-PI**2):.4f})
+""")
+
+# Compute observed expansion factor
+expansion_obs = R_obs / (c_light * t_universe)
+expansion_pred = PHI**(12 - PI**2)
+print(f"  Predicted expansion factor: φ^(12-π²) = {expansion_pred:.4f}")
+print(f"  Observed R/(c×t):                      {expansion_obs:.4f}")
+print(f"  Error: {abs(expansion_pred - expansion_obs)/expansion_obs * 100:.1f}%")
+print()
+print(f"  (The 17% error suggests the exact deficits aren't")
+print(f"   precisely π² and 12, but the structure is clear.)")
+print()
+
+
+# =========================================================================
+# PART 35: COMPLETE UNIVERSE SIZE FORMULA
+# =========================================================================
+
+print("\n" + "=" * 70)
+print("PART 35: COMPLETE UNIVERSE SIZE FORMULA")
+print("=" * 70)
+
+print(f"""
+PUTTING IT ALL TOGETHER:
+
+    R_universe = φ^(2·N_thermal - π²) × (1+δ)(1+δ²) × l_Planck
+
+    where:
+        N_thermal = ln(T_Planck/T_CMB) / ln(φ) = {n_thermal:.2f}
+        π² = spatial deficit (circle self-reference cost)
+        (1+δ)(1+δ²) = antimatter check (geometric series to d=4)
+        l_Planck = {l_Planck:.6e} m
+
+    Each piece has meaning:
+        φ^(2·N_thermal):  spatial = 2 × thermal (basic structure)
+        φ^(-π²):          curvature cost (π² from circle geometry)
+        (1+δ):            antimatter verification (1 check)
+        (1+δ²):           overlap self-verification
+        l_Planck:          quantum gravity floor
+
+    Result: {R_checked_gly:.2f} Gly (observed: ~46.5 Gly)
+    Accuracy: {abs(R_checked_gly-46.5)/46.5*100:.2f}%
+
+THE z-AXIS SUMMARY:
+
+    z+ (temperature) and z- (time) together define:
+        • Universe size via golden ratio levels
+        • Information cost via Landauer's principle
+        • Expansion via debt/credit balance
+        • Sacred numbers via deficits (π² spatial, 12 temporal)
+        • Antimatter boundary via (1+δ)(1+δ²) check
 """)
 
 
